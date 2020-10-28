@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Files</ion-title>
+  </ion-toolbar>
+  <ion-searchbar debounce="500" (ionChange)="searchHandler($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Files</ion-title>
+    </ion-toolbar>
+    <ion-searchbar debounce="500" (ionChange)="searchHandler($event)"></ion-searchbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="spinner" *ngIf="!loaded">
+      <ion-spinner color="primary"></ion-spinner>
+    </div>
+    <div *ngIf="loaded">
+      <div class="file" *ngFor="let item of searchResults">
+        <a href="/api/file/{{item.url}}">{{item.name}} <span style="color: white;">{{' - '}}</span> {{item.size}}</a>
+        <a class="file__download" href="/api/file/{{item.url}}" download>
+          <ion-icon size="large" name="download-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</ion-content>

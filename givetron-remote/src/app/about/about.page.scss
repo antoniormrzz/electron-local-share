@@ -1,0 +1,13 @@
+.about {
+  padding: 15px;
+
+  &__title {
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: lightgray;
+  }
+}

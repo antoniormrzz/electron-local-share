@@ -1,0 +1,9 @@
+@font-face {
+  font-family: sf;
+  src: url(../fonts/SF-UI-Text-Regular.ttf);
+}
+
+@font-face {
+  font-family: sfbold;
+  src: url(../fonts/SF-UI-Text-Semibold.ttf);
+}

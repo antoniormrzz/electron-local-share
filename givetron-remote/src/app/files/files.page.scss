@@ -1,0 +1,35 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#container {
+  .file {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--ion-color-primary);
+    padding: 10px;
+
+    a {
+      word-break: break-word;
+      text-decoration: none;
+    }
+
+    &__download {
+      margin-left: auto;
+    }
+  }
+}
+
+ion-searchbar{
+  background: black;
+}
+
+.spinner{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}

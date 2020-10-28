@@ -1,0 +1,6 @@
+givetron-electron/node_modules
+givetron-electron/dist
+givetron-remote/node_modules
+givetron-ui/node_modules
+.vscode/*
+*.code-workspace
