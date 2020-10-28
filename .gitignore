@@ -1,5 +1,11 @@
 givetron-electron/node_modules
 givetron-electron/dist
+givetron-electron/.yarn/*
+!givetron-electron/.yarn/releases
+!givetron-electron/.yarn/plugins
+!givetron-electron/.yarn/sdks
+!givetron-electron/.yarn/versions
+givetron-electron/.pnp.*
 givetron-remote/node_modules
 givetron-ui/node_modules
 .vscode/*

@@ -1,17 +1,45 @@
 {
-  "name": "givetron-electron",
+  "name": "givetron",
   "version": "1.0.0",
-  "description": "electron part of givetron",
+  "description": "share files over wifi",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc && electron ."
+    "start": "tsc && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.electron.givetronhome",
+    "mac": {
+      "category": "com.electron.givetronhome"
+    },
+    "productName": "Givetron Home",
+    "directories": {
+      "output": "out"
+    },
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
+      "!**/src",
+      "!src"
+    ]
   },
   "author": "Antonio Ramirez",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^10.1.3",
-    "gulp": "^4.0.2",
-    "gulp-typescript": "^6.0.0-alpha.1"
+    "electron-builder": "^22.9.1",
+    "gulp": "^4.0.2"
   },
   "dependencies": {
     "@types/electron": "^1.6.10",
